@@ -7,7 +7,7 @@ import (
 
 // Story is the record emitted for stories from any listing or single-story fetch.
 type Story struct {
-	ShortID      string    `json:"short_id"`
+	ShortID      string    `json:"short_id" kit:"id"`
 	ShortIDURL   string    `json:"short_id_url"`
 	URL          string    `json:"url"`
 	Title        string    `json:"title"`
@@ -58,19 +58,19 @@ type User struct {
 // ─── wire types ──────────────────────────────────────────────────────────────
 
 type wireStory struct {
-	ShortID      string    `json:"short_id"`
-	ShortIDURL   string    `json:"short_id_url"`
-	URL          string    `json:"url"`
-	Title        string    `json:"title"`
-	Score        int       `json:"score"`
-	CommentCount int       `json:"comment_count"`
-	Description  string    `json:"description"`
-	CreatedAt    time.Time `json:"created_at"`
-	Tags         []string  `json:"tags"`
-	SubmitterUser string   `json:"submitter_user"`
-	UserIsAuthor bool      `json:"user_is_author"`
-	CommentsURL  string    `json:"comments_url"`
-	Comments     []wireComment `json:"comments"`
+	ShortID       string        `json:"short_id"`
+	ShortIDURL    string        `json:"short_id_url"`
+	URL           string        `json:"url"`
+	Title         string        `json:"title"`
+	Score         int           `json:"score"`
+	CommentCount  int           `json:"comment_count"`
+	Description   string        `json:"description"`
+	CreatedAt     time.Time     `json:"created_at"`
+	Tags          []string      `json:"tags"`
+	SubmitterUser string        `json:"submitter_user"`
+	UserIsAuthor  bool          `json:"user_is_author"`
+	CommentsURL   string        `json:"comments_url"`
+	Comments      []wireComment `json:"comments"`
 }
 
 type wireComment struct {

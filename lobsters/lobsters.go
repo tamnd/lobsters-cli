@@ -19,8 +19,11 @@ import (
 	"time"
 )
 
+// Host is the canonical hostname for Lobste.rs.
+const Host = "lobste.rs"
+
 const (
-	baseURL = "https://lobste.rs"
+	baseURL = "https://" + Host
 )
 
 // DefaultUserAgent identifies the client to Lobste.rs.
