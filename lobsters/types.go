@@ -7,7 +7,7 @@ import (
 
 // Story is the record emitted for stories from any listing or single-story fetch.
 type Story struct {
-	ShortID      string    `json:"short_id"`
+	ShortID      string    `json:"short_id" kit:"id"`
 	ShortIDURL   string    `json:"short_id_url"`
 	URL          string    `json:"url"`
 	Title        string    `json:"title"`
